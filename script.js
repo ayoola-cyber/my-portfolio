@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Login successful!")
 
             window.location.href = "index.html"
-            
+
         })
     }
 
@@ -182,3 +182,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })
 }) 
+
+//Color-picker code
+
+// Get elements
+const colorPicker = document.getElementById('colorPicker');
+const colorBox = document.getElementById('colorBox');
+
+// Add event listener to the color input
+colorPicker.addEventListener('input', function () {
+  // Change the background color of the box to the selected color
+  colorBox.style.backgroundColor = colorPicker.value;
+});
