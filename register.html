@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav class="navBar">
+        <div class="logo">
+            <img src="./images/crafty-creations.png" alt="crafty-creations" width="100px" height="100px">
+        </div>
+        <div class="menuContainer">
+            <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./calculator.html">Calculator</a></li>
+                <li><a href="./to-do-list.html">To-do List</a></li>
+            </ul>
+        </div>
+        <div class="buttons">
+            <li><a href="./login.html" class="btn signIn" >Sign in</a></li>
+            <li><a href="./register.html" class="btn register">Register</a></li>
+        </div>
+    </nav>
+
+    <div class="styleContainer">
+    <div class="container">
+        <div class="welcome">
+            <h2>Create Account</h2>
+        </div>
+            <form action="./index.html" id="regForm" method="post">
+                <div class="formInput">
+                    <label for="regForename">Forename</label>
+                    <input type="text" id="regForename" placeholder="Enter your forename">
+                </div>
+                <div class="formInput">
+                    <label for="">Surname</label>
+                    <input type="text" id="regSurname" placeholder="Enter your surname">
+                </div>
+                <div class="formInput">
+                    <label for="regEmail">Email Address</label>
+                    <input type="email" id="regEmail" placeholder="Enter your email">
+                </div>
+                <div class="formInput">
+                    <label for="regPassword">Password</label>
+                    <input type="password" id="regPassword" placeholder="Enter your password">
+                </div>
+                <div class="formInput">
+                    <label for="regConfirm">Confirm Password</label>
+                    <input type="password" id="regConfirm" placeholder="Enter your password again">
+                </div>
+                <div class="formInput">
+                    <label for="regDob">Date of Birth</label> 
+                    <input type="date" id="regDob">
+                </div>
+                <div class="formInput">
+                    <label for="regGender">Gender</label>
+                    <div class="genderGroup">
+                        <div class="genderOption">
+                            <input type="radio" name="gender" value="female" id="female">
+                            <label for="female">Female</label>
+                        </div>
+                        <div class="genderOption">
+                            <input type="radio" name="gender" value="male" id="male">
+                            <label for="male">Male</label>
+                        </div>
+                        <div class="genderOption">
+                            <input type="radio" name="gender" value="other" id="other">
+                            <label for="other">Other</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="formInput">
+                    <label for="regCountry">Country</label>
+                    <select name="regCountry" id="regCountry">
+                        <option value="--">Select Country</option>
+                        <option value="unitedKingdom">United Kingdom</option>
+                        <option value="america">America</option>
+                        <option value="nigeria">Nigeria</option>
+                    </select>
+                </div>
+                <div class="formInput">
+                    <label for="regBio">Bio</label>
+                    <textarea name="regBio" id="regBio"  column="5" rows="5" placeholder="Tell us about yourself" ></textarea>
+                </div>
+                    <button type="submit" class="regButton">Register</button>
+            </form>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

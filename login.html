@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=">
+    <title>Login</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav class="navBar">
+        <div class="logo">
+            <img src="./images/crafty-creations.png" alt="crafty-creations" width="100px" height="100px">
+        </div>
+        <div class="menuContainer">
+            <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./calculator.html">Calculator</a></li>
+                <li><a href="./to-do-list.html">To-do List</a></li>
+            </ul>
+        </div>
+        <div class="buttons">
+            <li><a href="./login.html" class="btn signIn" >Sign in</a></li>
+            <li><a href="./register.html" class="btn register">Register</a></li>
+        </div>
+
+    </nav>
+
+    <div class="styleContainer">
+    <div class="container">
+        <div class="welcome">
+            <h2>Welcome Back</h2>
+            <p>Please enter your credentials to login</p>
+        </div>
+        <form id="loginForm" action="" method="post">
+            <div class="formInput">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email">
+            </div>
+             <div class="formInput">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password">
+            </div>
+            <button class="loginButton" type="submit">Login</button>
+        </form>
+        <div class="noAccount">
+            <span> Don't have an account?
+                <a href="register.html" target="_blank">Register</a>
+            </span>
+        </div>
+        <div class="loginPassword">
+            <a href="" class="forgotPassword">Forgot password?</a>
+        </div>
+    </div>
+</div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientifc Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav class="navBar">
+        <div class="logo">
+            <img src="./images/crafty-creations.png" alt="crafty-creations" width="100px" height="100px">
+        </div>
+        <div class="menuContainer">
+            <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./calculator.html">Calculator</a></li>
+                <li><a href="./to-do-list.html">To-do List</a></li>
+            </ul>
+        </div>
+        <div class="buttons">
+            <li><a href="./login.html" class="btn signIn">Sign in</a></li>
+            <li><a href="./register.html" class="btn register">Register</a></li>
+        </div>
+    </nav>
+    <div class="calculatorContainer">
+        <div class = "calculator">
+            <div id="view">
+                <input type="text" id="display" readonly>
+            </div>
+            <div class="main">
+    
+                    <button  data-action="clear">C</button>
+                    <button  data-action="backspace">⌫</button>
+                    <button  data-svalue="(">(</button>
+                    <button  data-value=")">)</button>
+    
+                    <button  data-value="/">÷</button>
+                    <button  data-value="7">7</button>
+                    <button  data-value="8">8</button>
+                    <button  data-value="9">9</button>
+               
+                    <button  data-value="*">x</button>
+                    <button  data-value="4">4</button>
+                    <button  data-value="5">5</button>
+                    <button  data-value="6">6</button>
+                
+                    <button  data-value="-">-</button>
+                    <button  data-value="1">1</button>
+                    <button  data-value="2">2</button>
+                    <button  data-value="3">3</button>
+               
+                    <button  data-value="+">+</button>
+                    <button  data-value="0">0</button>
+                    <button  data-value=".">.</button>
+                    <button data-action="sqrt">√</button>
+    
+                    <button  data-action="power">x²</button>
+                    <button  data-action="sine">sin</button>
+                    <button  data-action="cosine">cos</button>
+                    <button  data-action="tangent">tan</button>
+    
+                    <button  data-action="equal" id="equaled">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

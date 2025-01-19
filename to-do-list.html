@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav class="navBar">
+        <div class="logo">
+            <img src="./images/crafty-creations.png" alt="crafty-creations" width="100px" height="100px">
+        </div>
+        <div class="menuContainer">
+            <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./calculator.html">Calculator</a></li>
+                <li><a href="./to-do-list.html">To-do List</a></li>
+            </ul>
+        </div>
+        <div class="buttons">
+            <li><a href="./login.html" class="btn signIn">Sign in</a></li>
+            <li><a href="./register.html" class="btn register">Register</a></li>
+        </div>
+    </nav>
+
+    <div class="todolistContainer">
+        <div class="to-do-list">
+            <div class="list">
+                <h2>To-do List</h2>
+                <div class="input">
+                    <input type="text" placeholder="What do you need to do?" id="to-do">
+                    <button id="button">+</button>
+                </div>
+                <ul id="ulList"></ul>
+            
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </div>
+</body>
+</html>

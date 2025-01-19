@@ -1,0 +1,436 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color:  rgb(249, 220, 223);
+}
+
+.calculatorContainer {
+    background-color: rgb(249, 220, 223); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.calculator {
+    background-color: #ffffff;
+    width: 300px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 10px 10px 5px #3333;
+    
+}
+
+
+#display {
+    width: 100%;
+    height: 60px;
+    padding: 3px;
+    margin-bottom: 6px;
+    font-size: 18px;
+    background-color: #f1f1f1;
+    color: #333;
+    border-radius: 5px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 8px ;
+    border-width: 1.2px;
+    color: #333;
+    background-color: rgb(241, 210, 213);
+
+}
+
+#equaled {
+    grid-column: span 4;
+    font-size: 24px;
+}
+
+
+
+.todolistContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  rgb(249, 220, 223);
+    min-height: 100vh;
+}
+
+.to-do-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    max-width: 400px;
+    
+}
+
+.list {
+    background-color: #ffff;
+    border-radius: 12px;
+    padding: 15px 15px;
+    text-align: center;
+    box-shadow: 0px 2px 10px #b2a5a5;
+    width: 100%;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+#to-do {
+    flex: 1px;
+    padding: 12px 16px;
+    border: 1px solid #000000;
+    border-radius: 10px 0px 0px 10px;
+}
+
+#button {
+    background-color: rgb(249, 220, 223);
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    font-size: 18px;
+    padding: 12px 18px;
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+#ulList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li.list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px ;
+    margin-bottom: 8px;
+    box-shadow: inset  #000000;
+}
+
+li span {
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+
+li button {
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(252, 203, 208);
+    font-size: 14px;
+    color: #ffffff;
+    padding: 8px 12px;
+    cursor: pointer;
+
+}
+
+li button:hover {
+    background-color:rgb(255, 157, 166);
+
+}
+
+.styleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(249, 220, 223);
+    min-height: 100vh;
+}
+
+.container{
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 380px;
+    margin: 10px;
+    box-shadow: 3px 2px 10px #333333;
+}
+
+.welcome {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.welcome h2 {
+    margin-bottom: 10px;
+}
+
+.formInput {
+    margin-bottom: 16px;
+}
+
+.formInput label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.formInput input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    border: 1px solid #dddddd;
+    font-family: Cambria;
+}
+
+
+.loginButton, .regButton {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(249, 220, 223);
+    color: #333333;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+.loginButton:hover, .regButton:hover {
+    background-color: rgb(245, 171, 182);
+}
+
+.loginPassword {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.loginPassword a {
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(247, 170, 181);
+}
+
+.loginPassword a:hover {
+    color: rgb(251, 212, 218);
+}
+
+.genderGroup {
+    display: flex;
+    gap: 20px;
+}
+
+.genderOption {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.genderOption input {
+    width: auto;
+}
+
+.genderOption label {
+    margin: 0;
+}
+
+.noAccount {
+    margin-top: 20px;
+    text-align: center;
+}
+.noAccount span {
+    color: rgb(247, 170, 181);
+}
+
+.noAccount span a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.noAccount span a:hover {
+    color: #d9d9d9;
+
+}
+
+.navBar {
+    display: flex;
+    align-items: center ;
+    justify-content: space-between;
+    background-color: #ffffff;
+    box-shadow: 3px 1px #333; 
+    position: sticky;
+    padding: 0 20px;
+    top: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu > li {
+    list-style: none;
+}
+
+.menu > li > a {
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(247, 170, 178);
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    
+}
+
+.buttons > li{
+    list-style: none;
+}
+
+.buttons > li > a {
+    text-decoration: none;
+}
+
+
+.signIn {
+    color: rgb(247, 153, 162);
+    background-color: #ffffff;
+    font-weight: 450px;
+    border: 2px solid rgb(245, 197, 204);
+
+}
+
+.register {
+    background-color: rgb(249, 220, 223);
+    font-weight: 450px;
+    border: none;
+    color: #333;
+}
+
+
+.menu > li > a:hover {
+    color: rgb(240, 90, 105);
+}
+
+.btn:hover{
+    font-size: 16px;
+}
+
+.section1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    color: #ffffff;
+    background: linear-gradient(45deg, rgb(121, 185, 225), rgb(249, 127, 188));
+    height: 80vh;
+}
+
+.platform {
+    text-align: center;
+}
+
+.platform > h2 {
+    font-size: 2rem;
+    margin-bottom: 14px;
+}
+
+.platform p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.index {
+    text-decoration: none;
+    font-size: 18px;
+    background-color: #ffffff;
+    color: rgb(247, 183, 189);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.index:hover {
+    background-color:rgb(247, 183, 189);
+    color: #ffffff;
+}
+
+
+.section2 {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section2 h2 {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+
+}
+
+.cardContainer {
+    display: grid;
+    grid-template-columns:300px 300px 300px;
+    gap: 2rem;
+    place-content: center;
+}
+
+.card {
+    padding:2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding-left: auto;
+}
+
+.section3 {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(90deg, rgb(177, 218, 219), rgba(243, 182, 212, 0.863));
+}
+
+.section3 h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.section3 p {
+    margin-bottom: 2rem;
+
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #504f4f;
+    color: #ffffff;
+}
