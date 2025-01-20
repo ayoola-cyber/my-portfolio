@@ -450,3 +450,43 @@ footer {
   input[type="color"] {
     margin-top: 20px;
   }
+
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    border-radius: 8px;
+    background-color: white;
+    margin: 30px;
+    padding: 0 10px;
+
+}
+
+.time span {
+    font-size: 150px;
+
+}
+
+.time span.miliseconds {
+    color:  rgb(249, 220, 223);
+}
+
+.watchButton {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.watchButton button {
+    background-color: #ffffff;
+    padding: 20px 32px;
+    color: rgb(247, 182, 189);
+    margin: 0 5px;
+    border: none;
+}
+
+.watchButton button:hover {
+    cursor: pointer;
+    background-color: rgb(248, 207, 211);
+    color: #ffffff;
+}

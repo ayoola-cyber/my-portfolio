@@ -14,6 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
     //Register 
     const regForm = document.getElementById("regForm");
 
+    // Color-picker
+
+    // stopwatch 
+
+
     // calculator code
     button.forEach((btn) => {
         btn.addEventListener("click", () => {
@@ -175,22 +180,97 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    todoBtn.addEventListener("click", addTodo);
-    todoUl.addEventListener("keypress", (e) => {
-        if(e.key === "Enter"){
-            addTodo()
-        }
-    })
-}) 
+    // todoBtn.addEventListener("click", addTodo);
+    // todoUl.addEventListener("keypress", (e) => {
+    //     if(e.key === "Enter"){
+    //         addTodo()
+    //     }
+    // })
 
+    
 //Color-picker code
 
 // Get elements
-const colorPicker = document.getElementById('colorPicker');
-const colorBox = document.getElementById('colorBox');
+// const colorPicker = document.getElementById('colorPicker');
+// const colorBox = document.getElementById('colorBox');
 
-// Add event listener to the color input
-colorPicker.addEventListener('input', function () {
-  // Change the background color of the box to the selected color
-  colorBox.style.backgroundColor = colorPicker.value;
-});
+// // Add event listener to the color input
+// colorPicker.addEventListener('input', function () {
+//   // Change the background color of the box to the selected color
+//   colorBox.style.backgroundColor = colorPicker.value;
+// });
+
+// Stopwatch code
+
+const startButton = document.querySelector(".start");
+const stopButton = document.querySelector(".stop");
+const resetButton = document.querySelector(".reset");
+console.log(startButton);
+let hours = "0" + 0;
+let minutes = "0" + 0;
+let seconds = "0" + 0;
+let milliseconds = "0" + 0;
+let startTimer;
+
+function putValues(){
+    document.querySelector(".milliseconds").innerHTML = milliseconds;
+    document.querySelector(".seconds").innerHTML = seconds;
+    document.querySelector(".minutes").innerHTML = minutes;
+    document.querySelector(".hours").innerHTML = hours;
+
+}
+
+startButton.addEventListener("click", start)
+
+function start(){
+    startButton.classList.add("active");
+    stopButton.classList.remove("stopActive");
+    startTimer = setInterval(() => {
+        milliseconds++
+        milliseconds = milliseconds < 10 ? "0" + milliseconds : milliseconds;
+        if(milliseconds === 100){
+            seconds++ 
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+            milliseconds = "0" + 0;
+        } 
+
+        if(seconds === 60){
+            minutes++ 
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = "0" + 0;
+        }
+
+        if(minutes === 60){
+            hours++ 
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = "0" + 0;
+        }
+
+        putValues();
+
+
+    }, 10)
+}
+
+stopButton.addEventListener("click", stop)
+
+function stop(){
+    startButton.classList.add("active");
+    stopButton.classList.remove("stopActive");
+    clearInterval(startTimer);
+}
+
+resetButton.addEventListener("click", reset)
+
+
+function reset(){
+    startButton.classList.remove("stopActive");
+    stopButton.classList.remove("stopActive");
+    clearInterval(startTimer);
+    hours = "0" + 0;
+    minutes = "0" + 0;
+    seconds = "0" + 0;
+    milliseconds = "0" + 0;
+    putValues();
+}
+}) 
