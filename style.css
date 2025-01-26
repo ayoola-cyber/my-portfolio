@@ -490,3 +490,22 @@ footer {
     background-color: rgb(248, 207, 211);
     color: #ffffff;
 }
+
+.photoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 30px 35px 35px;
+    width:  850px;
+}
+
+.photoContainer h2{
+    margin-top: -10px;
+    font-size: 20px;
+}
+
+.photoWrapper {
+    display: flex;
+    margin: 20px 0;
+}
