@@ -491,21 +491,165 @@ footer {
     color: #ffffff;
 }
 
-.photoContainer {
+.mainContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    padding: 30px 35px 35px;
-    width:  850px;
+    padding: 15px;
 }
 
-.photoContainer h2{
-    margin-top: -10px;
-    font-size: 20px;
+.photoContainer {
+    background-color: #ffffff;
+    padding: 30px 35px;
+    border-radius: 20px;
+    width: 850px;
 }
 
 .photoWrapper {
     display: flex;
     margin: 20px 0;
+    min-height: 350px;
+}
+
+.photoContainer h2 {
+    font-size: 20px;
+    color: rgb(251, 189, 195);
+}
+
+.photoPanel {
+    width: 280px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid #b2a5a5;
+}
+
+.title {
+    font-size: 18px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.photoPlaceholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    flex-grow: 1;
+    margin-left: 21px;
+}
+
+.options{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.options button{
+    margin-bottom: 12px;
+    font-size: 16px;
+    border: 1px solid #b2a5a5;
+    background-color: #ffffff;
+    width: 100px;
+    border-radius: 4px;
+}
+
+.options button:hover {
+    cursor: pointer;
+    background-color: rgb(246, 205, 209);
+}
+
+.options button.active {
+    background-color: rgb(239, 185, 194);
+    color: #ffffff;
+}
+
+.slider {
+    margin-top: 10px;
+}
+
+.filter-info{
+    font-size: 18px ;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider input {
+    width: 100%;
+    height: 10px;
+    accent-color: rgb(239, 185, 194);
+}
+
+.rotateFlip {
+    margin-top: 15px;
+}
+
+.rotateFlip p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+ 
+.rotateButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotateButtons  button {
+    width: 4vw;
+    margin-right: 8px;
+    font-size: 16px;
+    border: 1px solid #b2a5a5;
+    background-color: #ffffff;
+    width: 100px;
+    border-radius: 4px;
+}
+
+.rotateButtons button:hover {
+    cursor: pointer;
+    background-color: rgb(246, 205, 209);
+}
+
+.controls  {
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+    gap: 380px;
+}
+
+.reset-filter {
+    background-color: #f2f2f2;
+
+}
+
+.reset-filter:hover {
+    cursor: pointer;
+    background-color:rgb(246, 205, 209);
+
+}
+
+.row button {
+    margin: 3px;
+
+}
+
+.choose-img{
+    background-color: #333333;
+    color: #f1f1f1;
+}
+
+.choose-img:hover {
+    background-color: hsl(0, 0%, 0%);
+    cursor: pointer;
+}
+.save-img{
+    background-color: rgb(246, 205, 209);
+    color: #000000
+}
+
+.save-img:hover{
+    cursor: pointer;
+    background-color: rgb(224, 155, 172);
+    color: #f1f1f1;
+
 }

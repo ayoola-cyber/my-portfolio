@@ -9,49 +9,71 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css" integrity="sha512-cn16Qw8mzTBKpu08X0fwhTSv02kK/FojjNLz0bwp2xJ4H+yalwzXKFw/5cLzuBZCxGWIA+95X4skzvo8STNtSg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="photoContainer">
-        <h2>Easy Image Editor</h2>
-        <div class="photoWrapper">
-            <div class="photoPanel">
-                <div class="filter">
-                    <label class="title">Filters</label>
-                    <div class="options">
-                        <button id="brightness" class="active">Brightness</button>
-                        <button id="saturation">Saturation</button>
-                        <button id="inversion">Inversion</button>
-                        <button id="grayscale">Grayscale</button>
-                    </div>
-                    <div class="slider">
-                        <div class="filter-info">
-                            <p class="name">Brighteness</p>
-                            <p class="value">100%</p>
+    <nav class="navBar">
+        <div class="logo">
+            <img src="./images/crafty-creations.png" alt="crafty-creations" width="100px" height="100px">
+        </div>
+        <div class="menuContainer">
+            <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./calculator.html">Calculator</a></li>
+                <li><a href="./to-do-list.html">To-do List</a></li>
+                <li><a href="./color-picker.html">Color-picker</a></li>
+                <li><a href="./stopwatch.html">Stop watch</a></li>
+                <li><a href="./photo-editor.html">Photo-editor</a></li>
+            </ul>
+        </div>
+        <div class="buttons">
+            <li><a href="./login.html" class="btn signIn" >Sign in</a></li>
+            <li><a href="./register.html" class="btn register">Register</a></li>
+        </div>
+
+    </nav>
+    <div class="mainContainer">
+        <div class="photoContainer">
+            <h2>Easy Image Editor</h2>
+            <div class="photoWrapper">
+                <div class="photoPanel">
+                    <div class="filter">
+                        <label class="title">Filters</label>
+                        <div class="options">
+                            <button id="brightness" class="active">Brightness</button>
+                            <button id="saturation">Saturation</button>
+                            <button id="inversion">Inversion</button>
+                            <button id="grayscale">Grayscale</button>
                         </div>
-                        <input type="range" value="100" min="0" max="200">
+                        <div class="slider">
+                            <div class="filter-info">
+                                <p class="name">Brightness</p>
+                                <p class="value">100%</p>
+                            </div>
+                            <input type="range" value="100" min="0" max="200">
+                        </div>
+                    </div>
+                    <div class="rotateFlip">
+                        <p>Rotate & Flip</p>
+                        <div class="rotateButtons">
+                            <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+                            <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                            <button id="vertical"><i class='bx bx-reflect-vertical'></i></button>
+                            <button id="horizontal"><i class='bx bx-reflect-horizontal'></i></button>
+                        </div>
                     </div>
                 </div>
-                <div class="rotateFlip">
-                    <h2>Rotate & Flip</h2>
-                    <div class="rotateButtons">
-                        <button><i class="fa-solid fa-rotate-left"></i></button>
-                        <button><i class="fa-solid fa-rotate-right"></i></button>
-                        <button><i class='bx bx-reflect-vertical'></i></button>
-                        <button><i class='bx bx-reflect-horizontal'></i></button>
-                    </div>
+                <div class=photoPlaceholder>
+                    <img src="./images/photo-placeholder.svg" alt="placeholder" >
                 </div>
             </div>
-            <!-- <div class=photoPlaceholder>
-                <img src="./images/photo-placeholder.svg" alt="placeholder">
-            </div> -->
-        </div>
-          <div class="controls">
-            <button class="reset-filter">Reset Filters</button>
-            <div class="row">
-                <input type="file" class="file-input" accept="image/*" hidden>
-                <button class="choose-img">Choose Image</button>
-                <button class="save-img">Save Image</button>
+              <div class="controls">
+                <button class="reset-filter">Reset Filters</button>
+                <div class="row">
+                    <input type="file" class="file-input" accept="image/*" hidden>
+                    <button class="choose-img">Choose Image</button>
+                    <button class="save-img">Save Image</button>
+                </div>
             </div>
         </div>
     </div>
-    <script src="./script.js"></script>
+    <script src="./editor.js"></script>
 </body>
 </html>

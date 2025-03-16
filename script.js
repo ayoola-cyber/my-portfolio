@@ -187,20 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //     }
     // })
 
-    
-//Color-picker code
-
-// Get elements
-// const colorPicker = document.getElementById('colorPicker');
-// const colorBox = document.getElementById('colorBox');
-
-// // Add event listener to the color input
-// colorPicker.addEventListener('input', function () {
-//   // Change the background color of the box to the selected color
-//   colorBox.style.backgroundColor = colorPicker.value;
-// });
-
-// Stopwatch code
+    // Stopwatch code
 
 const startButton = document.querySelector(".start");
 const stopButton = document.querySelector(".stop");
@@ -273,4 +260,47 @@ function reset(){
     milliseconds = "0" + 0;
     putValues();
 }
+
+
+//Color-picker 
+
+// Get elements
+const colorPicker = document.getElementById('colorPicker');
+const colorBox = document.getElementById('colorBox');
+
+// Add event listener to the color input
+colorPicker.addEventListener('input', function () {
+  // Change the background color of the box to the selected color
+  colorBox.style.backgroundColor = colorPicker.value;
+});
+
+
+//photo-editor
+const fileInput = document.querySelector(".file-input");    
+const chooseImg= document.querySelector(".choose-img");    
+const saveImg = document.querySelector(".save-img");    
+const previewImg = document.querySelector(".photoPlaceholder img");
+
+console.log(fileInput);
+console.log(previewImg);
+
+const loadImg = () => {
+    let file = fileInput.files[0]
+    if (!file) return;
+    previewImg.src = URL.createObjectURL(file);
+    previewImg.addEventListener("load", () => {
+
+    })
+
+    
+}
+
+chooseImg.addEventListener("click", () => {
+    fileInput.click()
+})
+
+fileInput.addEventListener("change", loadImg);
+
+
+
 }) 
