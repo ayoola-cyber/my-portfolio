@@ -104,6 +104,27 @@ const resetFilterbtn = () => {
 
 }
 
+const saveImage = () => {
+    const canvas = document.createElement("canvas");
+    const context = canvas.getContext("2d");
+    canvas.width = previewImg.naturalWidth;
+    canvas.height = previewImg.naturalHeight;
+    context.filter = `brightness(${brightness}%) saturate(${saturation}%) invert(${inversion}%) grayscale(${grayscale}%)` 
+    context.translate(canvas.width/2, canvas.height/2)
+    if(rotate !== 0){   
+        context.rotate(rotate * Math.PI / 180)
+    }
+    context.scale(flipHorizontal, flipVertical)
+    context.drawImage(previewImg, -canvas.width/2, -canvas.height/2, canvas.width, canvas.height)
+
+    const link = document.createElement("a");
+    link.download = "img.jpg"
+    link.href = canvas.toDataURL()
+    link.click()
+}
+
+saveImg.addEventListener("click", saveImage)
+
 resetFilter.addEventListener("click", resetFilterbtn)
 
 filterSlider.addEventListener("input", filterUpdate)
